@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все работники</title>
+</head>
+<body>
+
+<div th:each=" user : ${employees}">
+    <a th:hre = "@{/employees{id}(id=${user.getId()})}" th:text="${user.getName()}">user </a>
+    <a th:hre = "@{/employees{id}(id=${user.getId()})}" th:text="${user.getSurname()}">user </a>
+</div>
+
+</body>
+</html>
